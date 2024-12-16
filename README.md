@@ -4,8 +4,7 @@ A lab on hash tables, structured for Maven.
 
 **Authors**
 
-* Your Name Here
-* Your Name Here
+* Princess Alexander
 * Samuel A. Rebelsky (starter code)
 
 **Citations**
@@ -14,5 +13,5 @@ A lab on hash tables, structured for Maven.
 
 ---
 
-This code may be found at <https://github.com/USERNAME/lab-hashtables-maven>.
+This code may be found at <https://github.com/princess-d-alexander/lab-hashtables-maven>.
 The original code may be found at <https://github.com/Grinnell-CSC207/lab-hashtables-maven>.

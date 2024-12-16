@@ -6,10 +6,9 @@ import edu.grinnell.csc207.util.Reporter;
 import java.io.PrintWriter;
 
 /**
- * A simple experiment with probed hash tables.
+ * A series of experiments with chained hash tables.
  *
- * @author Your Name Here
- * @author Your Name Here
+ * @author Princess Alexander
  * @author Samuel A. Rebelsky
  */
 public class ChainedHashTableExperiments {
@@ -19,7 +18,7 @@ public class ChainedHashTableExperiments {
   // +------+
 
   /**
-   * Do whatever experiments seem reasonable.
+   * Conduct a series of experiments on chained hash tables.
    *
    * @param args
    *   Command-line arguments (ignored).
@@ -38,15 +37,42 @@ public class ChainedHashTableExperiments {
     ChainedHashTable<String, String> htab =
         new ChainedHashTable<String, String>(rept);
 
-    // Most of the time, we don't care about the basic calls
+    // Experiment 0: Setup and observation
+    pen.println("=== Experiment 0: Initial Setup ===");
     htab.reportBasicCalls(false);
+    htab.dump(pen); // Print the initial, empty state of the hash table
+    pen.println();
 
-    // Conduct some of the experiments
-    // HashTableExperiments.matchingKeysExpt(pen, htab);
-    // HashTableExperiments.repeatedSetExpt(pen, htab);
-    // HashTableExperiments.matchingSetExpt(pen, htab);
-    // HashTableExperiments.multipleSetExpt(pen, htab);
-    // HashTableExperiments.removeExpt(pen, htab);
+    // Experiment 1: Matching keys
+    pen.println("=== Experiment 1: Matching Keys ===");
+    HashTableExperiments.matchingKeysExpt(pen, htab);
+    pen.println("Experiment 1 completed.\n");
+
+    // Experiment 2: Duplicate keys
+    pen.println("=== Experiment 2: Duplicate Keys ===");
+    HashTableExperiments.repeatedSetExpt(pen, htab);
+    pen.println("Experiment 2 completed.\n");
+
+    // Experiment 3: Handling collisions (single collision scenario)
+    pen.println("=== Experiment 3: Handling Collisions (Single Case) ===");
+    HashTableExperiments.matchingSetExpt(pen, htab);
+    pen.println("Experiment 3 completed.\n");
+
+    // Experiment 4: Handling collisions (multiple collisions)
+    pen.println("=== Experiment 4: Handling Collisions (Multiple Cases) ===");
+    HashTableExperiments.multipleSetExpt(pen, htab);
+    pen.println("Experiment 4 completed.\n");
+
+    // Experiment 5: Removing elements
+    pen.println("=== Experiment 5: Removing Elements ===");
+    HashTableExperiments.removeExpt(pen, htab);
+    pen.println("Experiment 5 completed.\n");
+
+    // Final report and cleanup
+    pen.println("=== All experiments completed. ===");
+    htab.reportBasicCalls(false); // Turn off basic call reporting
+    htab.dump(pen); // Final state of the hash table
+    pen.close(); // Close the writer
   } // main(String[])
 
 } // class ChainedHashTableExperiments

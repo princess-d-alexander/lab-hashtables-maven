@@ -1,14 +1,13 @@
 package edu.grinnell.csc207.experiments;
 
-import edu.grinnell.csc207.util.HashTable;
-
 import java.io.PrintWriter;
+
+import edu.grinnell.csc207.util.HashTable;
 
 /**
  * A simple set of experiments using our new hash tables.
  *
- * @author Your Name Here
- * @author Your Name Here
+ * @author Princess Alexander
  * @author Samuel A. Rebelsky
  */
 public class HashTableExperiments {

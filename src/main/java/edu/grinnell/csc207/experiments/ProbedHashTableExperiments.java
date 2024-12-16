@@ -9,7 +9,6 @@ import java.io.PrintWriter;
  * A simple experiment with probed hash tables.
  *
  * @author Your Name Here
- * @author Your Name Here
  * @author Samuel A. Rebelsky
  */
 public class ProbedHashTableExperiments {
